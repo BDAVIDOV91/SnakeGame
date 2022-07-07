@@ -79,7 +79,7 @@ def showScore(choice, color, font, size):
 
 while True:
     for event in pygame.event.get():
-        if event.type ==pygame.QUIT:
+        if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit
 
@@ -137,13 +137,13 @@ while True:
         pygame.draw.rect(gameWindow, green, pygame.Rect(pos[0], pos[1], 10, 10))
 
     #snake food
-    pygame.draw.rect(gameWindow, white, pygame,pygame.Rect(foodPos[0], foodPos[1], 10, 10))
+    pygame.draw.rect(gameWindow, white, pygame.Rect(foodPos[0], foodPos[1], 10, 10))
 
 
     #game over condition
     if snakePos[0] < 0 or snakePos[0] > frameSize_x-10:
         gameOver()
-    if snakePos[1] <0 or snakePos[1] > frameSize_y-10:
+    if snakePos[1] < 0 or snakePos[1] > frameSize_y-10:
         gameOver()
 
     for block in snakeBody[1:]:
